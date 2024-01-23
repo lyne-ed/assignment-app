@@ -1,0 +1,46 @@
+.returned {
+  color: green
+}
+
+.not-returned {
+  color: red
+}
+
+.assignmentsList {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+.button-add-assignment {
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+}
+
+.h3-subheader {
+  font-weight: bold;
+  color: gray;
+}
+
+a {
+  color: #000;
+  position: relative;
+  text-decoration: none;
+}
+
+a::before {
+  background: hsl(50, 46%, 80%);
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}

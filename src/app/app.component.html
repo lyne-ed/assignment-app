@@ -1,0 +1,49 @@
+<!-- Side nav list-->
+<mat-sidenav-container class="mySideNav" *ngIf="shouldRun">
+  <mat-sidenav mode="side" #sidenav>
+
+    <mat-nav-list>
+      <a href="" class="side-nav-link-assignments-list" mat-list-item routerLink="/home"> <mat-icon
+          class="side-nav-link-assignments-list-icon">view_list</mat-icon> Assignments List</a>
+
+      <a href="" class="side-nav-link-add-assignments" mat-list-item routerLink="/add"> <mat-icon
+          class="side-nav-link-add-assignments-icon">note_add</mat-icon> Add Assignments</a>
+
+      <a href="" class="side-nav-link-edit-assignments" mat-list-item> <mat-icon
+          class="side-nav-link-edit-assignments-icon">border_color</mat-icon> Edit Assignments</a>
+
+      <a href="" class="side-nav-link-delete-assignments" mat-list-item> <mat-icon
+          class="side-nav-link-delete-assignments-icon">delete</mat-icon> Delete Assignments</a>
+
+      <a href="" class="side-nav-link-data-test-generation" mat-list-item> <mat-icon
+          class="side-nav-link-data-test-generation-icon">data_usage</mat-icon> Data Test Generation </a>
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <!-- Tool Bar -->
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="menu-nav-list-icon" aria-label="Menu nav list icon" (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+
+      <button mat-icon-button class="home-icon" aria-label="Home icon" routerLink="/home">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+      </button>
+
+      <span class="myToolbar">Assignment Handler</span>
+
+      <button mat-raised-button class="sign-in-url" routerLink="/login">Log In</button>
+
+    </mat-toolbar>
+
+    <!-- Main content : button and list of assignments-->
+    <!-- <app-assignments></app-assignments> -->
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

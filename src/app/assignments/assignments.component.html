@@ -1,0 +1,35 @@
+<!-- <app-add-assignment *ngIf="activeAdd" (newAssignment)="onNewAssignment($event)" ></app-add-assignment> -->
+
+<!-- <main *ngIf="!activeAdd" class="container"> -->
+<main class="container">
+
+    <button mat-flat-button color="primary" class="button-add-assignment" routerLink="/add">
+        Go Add Assignment
+    </button>
+
+    <!-- Display of the detail of an assignment -->
+    <mat-list *ngFor="let assignment of listAssignments">
+      <h3 mat-subheader class="h3-subheader">{{assignment.date | date:'dd/MM/yyyy'}}</h3>
+
+      <mat-list-item (click)="onAssignmentClicked(assignment)" class="mat-list-item-assignment">
+          <span *ngIf="assignment.returned" appReturned>
+              {{assignment.student}} : Assignment {{assignment.name}} has been returned on {{assignment.date | date:'dd/MM/yyyy'}}
+          </span>
+          <span *ngIf="!assignment.returned" appNotReturned>
+              {{assignment.student}} : Assignment {{assignment.name}} has not been returned yet
+          </span>
+      </mat-list-item>
+
+      <mat-divider></mat-divider>
+  </mat-list>
+
+  <mat-paginator [length]="totalAssignments"
+  [pageSize]="assignmentsPerPage"
+  [pageIndex]="currentPage"
+  (page)="changePage($event)">
+</mat-paginator>
+
+
+
+    <!-- <app-assignment-detail [assignmentSent]="assignmentSelected" (onDelete)="deleteAssignment($event)"></app-assignment-detail> -->
+</main>

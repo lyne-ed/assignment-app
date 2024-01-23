@@ -1,0 +1,10 @@
+.form-update {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    margin-left: 15px;
+}
+
+h1 {
+    margin-left: 20px;
+}

@@ -1,0 +1,118 @@
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+.login-slide-toggle {
+  margin-left:75%;
+  padding: 5px;
+}
+
+.sign-in-url {
+  margin-left: auto;
+  text-decoration: none;
+  color: white;
+  border: 2.5px solid white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.side-nav-title {
+  color: goldenrod;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.side-nav-link-assignments-list {
+  color: black;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.side-nav-link-assignments-list-icon {
+  margin-top: 20px;
+}
+
+.side-nav-link-add-assignments {
+  color: black;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.side-nav-link-add-assignments-icon {
+  margin-top: 20px;
+}
+
+.side-nav-link-edit-assignments {
+  color: black;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.side-nav-link-edit-assignments-icon {
+  margin-top: 20px;
+}
+
+.side-nav-link-delete-assignments {
+  color: black;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.side-nav-link-delete-assignments-icon {
+  margin-top: 20px;
+}
+
+.side-nav-link-data-test-generation {
+  color: black;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.side-nav-link-data-test-generation-icon {
+  margin-top: 20px;
+}
+
+.mySideNav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}

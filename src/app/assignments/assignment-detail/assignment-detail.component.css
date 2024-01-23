@@ -1,0 +1,16 @@
+.mat-card-assignment {
+    margin: 10px;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mini-fab-delete-assignment {
+    margin-left: 15px;
+}
+
+.buttons-card {
+    display: flex;
+    justify-content: flex-start;
+}

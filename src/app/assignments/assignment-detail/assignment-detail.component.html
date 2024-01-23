@@ -1,0 +1,35 @@
+<!-- Mat card omg trop stylé -->
+<mat-card *ngIf="assignmentSent" class="mat-card-assignment">
+
+    <mat-card-content>
+
+        <mat-card-title>
+            Assignment: {{assignmentSent.name}} | {{assignmentSent.instructions}}
+        </mat-card-title>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-subtitle>
+            Due to: {{assignmentSent.date | date:'dd/MM/yyyy'}}
+        </mat-card-subtitle>
+
+        <mat-card-subtitle>
+            Student: {{assignmentSent.student}}
+        </mat-card-subtitle>
+
+        <mat-checkbox *ngIf="!assignmentSent.returned" (click)="onAssignmentReturned()">
+            Assignment completed
+        </mat-checkbox>
+
+        <div class="buttons-card">
+            <button mat-mini-fab color="basic" [disabled]="!isUserAdmin()" (click)="onEditAssignment()">
+                <mat-icon>edit</mat-icon>
+            </button>
+
+            <button mat-mini-fab color="warn" [disabled]="!isUserAdmin()" (click)="onDeleteAssignment()">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </mat-card-content>
+
+</mat-card>

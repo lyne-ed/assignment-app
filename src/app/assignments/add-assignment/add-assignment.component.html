@@ -1,0 +1,23 @@
+<!-- Display of the form to add an assignment -->
+<form ngForm (submit)="onSubmit(); assignmentForm.reset()" #assignmentForm class="form-name-date-assignment">
+    <mat-form-field>
+        <input matInput [(ngModel)]="assignmentName" name="name" placeholder="Name of the assignment" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [(ngModel)]="assignmentStudent" name="student" placeholder="Student of the assignment" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput [(ngModel)]="assignmentInstructions" name="instructions" placeholder="Instructions"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <input matInput [matDatepicker]="picker" placeholder="Date of return" [(ngModel)]="assignmentDateReturn"
+            name="date" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <button mat-stroked-button color="primary">Add Assignment</button>
+</form>
