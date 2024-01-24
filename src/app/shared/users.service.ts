@@ -12,7 +12,7 @@ export class UsersService {
 
   constructor(private loggingService: LoggingService, private http: HttpClient) { }
 
-    apiUrl = "http://localhost:8010/api/users";
+    apiUrl = "https://lyne-ed-api.onrender.com/api/users";
 
     registerUser(user: User): Observable<any> {
         return this.http.post<User>(this.apiUrl + '/register', user);
