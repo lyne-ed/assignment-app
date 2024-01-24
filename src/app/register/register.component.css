@@ -1,11 +1,11 @@
-.form-login {
+.form-register {
     width: 100%;
     max-width: 330px;
     padding: 15px;
     margin: auto;
 }
 
-.form-login-button {
+.form-register-button {
     width: 65%;
 }
 

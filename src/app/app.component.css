@@ -44,6 +44,32 @@ section {
   border-radius: 5px;
 }
 
+mat-toolbar {
+  display: flex;
+  align-items: center;
+}
+
+.auth-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.sign-in-text {
+  margin-right: 10px;
+}
+
+.logout-button {
+  margin-left: auto;
+  text-decoration: none;
+  color: white;
+  background-color: white;
+  border: 2.5px solid white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
 .side-nav-title {
   color: goldenrod;
   margin-left: 10px;

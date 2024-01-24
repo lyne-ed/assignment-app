@@ -27,6 +27,7 @@ import { AddAssignmentComponent    } from './assignments/add-assignment/add-assi
 import { AppRoutingModule          } from './app-routing.module';
 import { EditAssignmentComponent   } from './assignments/edit-assignment/edit-assignment.component';
 import { LoginComponent            } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { LoginComponent            } from './login/login.component';
     AssignmentDetailComponent,
     AddAssignmentComponent,
     EditAssignmentComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

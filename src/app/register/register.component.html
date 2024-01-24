@@ -1,4 +1,4 @@
-<form ngForm (submit)="onLogin()" class="form-login">
+<form ngForm (submit)="onRegister()" class="form-register">
   <mat-form-field>
     <input matInput name="username" placeholder="Username" [(ngModel)]="username" required>
   </mat-form-field>
@@ -7,8 +7,8 @@
     <input matInput name="password" placeholder="Password" type="password" [(ngModel)]="password" required>
   </mat-form-field>
 
-  <button mat-raised-button color="primary" class="form-login-button">Log In</button>
+  <button mat-raised-button color="primary" class="form-register-button">Log In</button>
 
   <!-- Display the error message in red text -->
-  <p *ngIf="loginError" class="error-text">{{ loginError }}</p>
+  <p *ngIf="registerError" class="error-text">{{ registerError }}</p>
 </form>

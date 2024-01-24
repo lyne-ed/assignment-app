@@ -100,7 +100,6 @@ export class AssignmentsComponent implements OnInit {
         this.totalAssignments = response.total;
         this.currentPage = page;
         this.cdr.detectChanges();
-        console.log(this.listAssignments[0]);
     });
 }
 

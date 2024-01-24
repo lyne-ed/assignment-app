@@ -11,6 +11,7 @@ export class LoginComponent {
   username:any;
   password:any;
   admin:any;
+  loginError: string | null = null;
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -18,10 +19,19 @@ export class LoginComponent {
 
   }
 
-  onLogin(): void {
-    this.authService.logIn(this.username, this.password);
-    this.admin = this.authService.isUserAdmin();
-    this.router.navigate(['/home']);
-    console.log("connected as " + this.username);
-  }
+onLogin(): void {
+  this.authService.logIn(this.username, this.password).subscribe(
+    () => {
+      this.admin = this.authService.isUserAdmin();
+      this.router.navigate(['/home']);
+      console.log("connected as " + this.username);
+    },
+    (error) => {
+      console.error('Login error in onLogin:', error);
+      this.loginError = "Username or password incorrect";
+    }
+  );
+}
+
+
 }

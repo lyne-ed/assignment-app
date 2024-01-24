@@ -27,19 +27,34 @@
     <!-- Tool Bar -->
     <mat-toolbar color="primary">
       <button mat-icon-button class="menu-nav-list-icon" aria-label="Menu nav list icon" (click)="sidenav.toggle()">
-        <mat-icon>menu</mat-icon>
+          <mat-icon>menu</mat-icon>
       </button>
 
-
       <button mat-icon-button class="home-icon" aria-label="Home icon" routerLink="/home">
-        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
       </button>
 
       <span class="myToolbar">Assignment Handler</span>
 
-      <button mat-raised-button class="sign-in-url" routerLink="/login">Log In</button>
+      <!-- Affiche "Logged in as <username>" si getUsername() n'est pas null -->
+        <div class="auth-container">
+          <!-- Affiche "Logged in as <username>" si getUsername() n'est pas null -->
+          <span *ngIf="getUsername(); else loginLink" class="sign-in-text">
+              Logged in as {{ getUsername() }}
+          </span>
 
-    </mat-toolbar>
+          <!-- Bouton de déconnexion -->
+          <button *ngIf="getUsername()" mat-raised-button (click)="logOut()" class="logout-button">Log Out</button>
+
+          <!-- Template affiché si getUsername() est null -->
+          <ng-template #loginLink>
+            <button mat-raised-button routerLink="/login" style="margin-right: 10px;">Log In</button>
+            <button mat-raised-button routerLink="/register">Register</button>
+          </ng-template>
+
+      </div>
+  </mat-toolbar>
+
 
     <!-- Main content : button and list of assignments-->
     <!-- <app-assignments></app-assignments> -->
