@@ -1,27 +1,20 @@
 # AssignmentApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
+Étudiants : Adam REGUIG & Lyne EL DADA
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Toolbar
+- Side nav
+- 1 000 devoirs dans
+- Gestion de login/password dans la toolbar avec contraintes
+- AVANCÉ ++ : Authentification à l'aide de JWT :
+    - Authentification avec JWT et stockage des users/password (hashés) dans la base de données Mongo
+    - Stockage du cookie de session pour pas la perdre si on rafraichis
+    - Ajout d'un bouton register
+- Levée d'erreur si les credentials sont incorrect
+    - credentials disponibles : admin/admin et lyne/lyne
+- Requêtes GET POST PUT DELETE MongoDB implémentées pour les assignments et les users
+- Hébergement sur render : https://assignment-app-yvcx.onrender.com/home
+- Remplissage MongoDB avec Mockaroo
+- Pagination utilisable dans le footer
+- Utilisation de Paginator de Angular Material
+- Assignments triés par date
