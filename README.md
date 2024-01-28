@@ -1,7 +1,5 @@
 # AssignmentApp
 
-Étudiants : Adam REGUIG & Lyne EL DADA
-
 - Toolbar
 - Side nav
 - 1 000 devoirs dans la base de données
