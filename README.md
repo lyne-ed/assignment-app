@@ -8,7 +8,7 @@
 - Gestion de login/password dans la toolbar avec contraintes
 - AVANCÉ ++ : Authentification à l'aide de JWT :
     - Authentification avec JWT et stockage des users/password (hashés) dans la base de données Mongo
-    - Stockage du cookie de session pour pas la perdre si on rafraichis
+    - Stockage du cookie de session pour pas la perdre si on rafraichit
     - Ajout d'un bouton register
 - Levée d'erreur si les credentials sont incorrect
     - credentials disponibles : admin/admin et lyne/lyne
